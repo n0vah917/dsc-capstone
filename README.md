@@ -1,6 +1,7 @@
 # Determining Attributes of Good Restaurants Using Review Text
 
 
+![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/7.jpg)
 
 ## Project Overview/Summary
 

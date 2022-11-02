@@ -202,3 +202,21 @@ Additionally, combining both components of the project by displaying top words o
 Using a logistic regresssion model on the additional features that were present in the initial dataset, such as presence of restaurant features and votes on individual reviews, would provide a different perspective on the most critical features that influence good/bad reviews. Restaurants would be able to add these features (e.g. a salad bar) in an effort to improve customer perception.
 
 Running the NLP analysis under the grain of restaurant categories may revieal if some cuisine types receive worse criticism than others. Restaurants with differing cuisine types may require differing solutions. The output for each of the category types would provide a solution set for each cuisine.
+
+## For More Information
+
+Please review the full analysis in the corresponding Jupyter Notebook and presentation.
+
+For any additional questions, please contact Noah-John Hizon at noahiz917@gmail.com 
+
+
+## Repository Structure
+
+
+...
+├── README.md
+├── repository.pdf                                                      #pdf of repository
+├── presentation.pdf                                                    #pdf of presentation
+├── jupyter notebook.pdf                                                #pdf of jupyter notebook
+├── yelpcomgen.csv                                                      #data file used for analysis
+└── Determining Attributes of Good Restaurants Using Review Text.ipynb  #jupyter notebook containing all relevant summaries/analyses

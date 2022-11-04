@@ -130,7 +130,7 @@ The model performance is relatively strong, when considering the overall imbalan
 Several of the identified words/phrases below seemed to highlight features and experiences regarding the restaurants in the dataset, both good and bad. The themes around the experience-oriented phrases revolve around money spent or bad experiences from attending staff (e.g. speaking to managers, hospitality, sub-par service, saving money, taking forever, horrible service). It seems as if these issues, when apparent from the customer end, may even be reflected through the experience with the food. Inefficiencies with any restaurant or business are hard to ignore, and they translate down to the inevitable service a customer gets.
 
 
-![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/5.png)
+![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/5.png) 
 
 
 # Recommendation System

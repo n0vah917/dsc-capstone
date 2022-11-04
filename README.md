@@ -41,8 +41,6 @@ There are a massive amount of reviews in the dataset to parse through, with arou
 ![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/2.png)
 
 
-
-
 ## Data Preparation
 
 The first step in prepping the dataset to be summarized is to break each review (currently stored as a text string in the overall table) into individual tokens, separating by commas, then re-populating as a list in each row in the dataframe. Below, the regular expression pattern is used within the tokenizer to split words, looking for non-letter characters as boundaries while preserving apostrophes within words where relevant.
@@ -126,8 +124,28 @@ When considering a matter as sensitive as the restaurant industry, the distribut
 A classification report and confusion matrix of the final classifier model iteration can be seen below across the test/train datasets.
 
 The model performance is relatively strong, when considering the overall imbalance between good and bad reviews. This imbalance is to be expected, however, as seen through the previous plotted distributions, more people tend to leave relatively positive reviews for restaurants. In an ideal scenario, there would be an equal distrbution of good/bad restaurant reviews, but people may not want to leave bad reviews often, potentially out of fear of ruining someone's livelihood.
+From the above excerpts, the following aspects of improvement were identified, supported by example words/phrases for each aspect. The common thread amongst positive reviews revolves around food quality and overall experience. The common thread amongst negative reviews revolves around bad experiences and interactions with front-of-house staff, e.g. waiters. That being said, customers may be willing to overlook bad service in some instances if they receive great quality food.
 
-Several of the identified words/phrases below seemed to highlight features and experiences regarding the restaurants in the dataset, both good and bad. The themes around the experience-oriented phrases revolve around money spent or bad experiences from attending staff (e.g. speaking to managers, hospitality, sub-par service, saving money, taking forever, horrible service). It seems as if these issues, when apparent from the customer end, may even be reflected through the experience with the food. Inefficiencies with any restaurant or business are hard to ignore, and they translate down to the inevitable service a customer gets.
+Food Quality
+Positive reviews - words of highest importance: 'best thai','omakase','ingredient fresh'; Negative reviews - words of highest importance: 'filthy','subpar','ugh','bug','heat lamp'
+
+As seen through the majority of important words identified within positive reviews, descriptors of the dishes eaten take prevalence throughout the top 50 ranking. The negative review words primarily refer to the overall experience being disappointing, but words like 'ugh' are symbolic of disgust that diners have with their meals. Food kept warm under a heat lamp, as seen in several buffets, is known to be old/dried out.
+
+Service Quality
+Positive reviews - words of highest importance:'owner chef','staff amaze','family run'; Negative reviews - words of highest importance: 'service lack', service terrible','seem (to) care'
+
+While the positive reviews seem to praise amazing staff, the negative reviews mention service lacking within multiple phrases. Little regard/care for the overall customer experience seems to be a common theme for negative reviews.
+
+Value Perceived by Customers
+Positive reviews - words of highest importance: 'ayce sushi'; Negative reviews - words of highest importance: 'waste money','save money','waste time money','pay extra'
+
+Customers reporting feelings of wasting time/money by dining at a restaurant is a common theme with negative reviews, causing them to be detractors and leaving negative reviews. They may not feel like the dish they paid for was worth its listed cost.
+
+Time to Receive Food
+Positive reviews - words of highest importance: 'take first'; Negative reviews - words of highest importance: 'good minute','get bill','take forever get','bring check','waiter take'
+
+Through the negative reviews, it is heavily noticable when restaurants drop the ball on timeliness and pacing of a meal. Diners who have to wait longer for service are inherently more hungry, impatient, and cranky, causing them to leave cautionary reviews.
+
 
 
 ![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/8.png) 
@@ -166,13 +184,21 @@ The model was able to successfully assign the majority of restaurant reviews in 
 
 As seen in the ranked keyword importances from the model, several words that were most impactful for the performance of the overall classifier identified a restaurant's features and experiences, both good and bad.
 
+Food Quality
+Positive reviews - words of highest importance: 'best thai','omakase','ingredient fresh'; Negative reviews - words of highest importance: 'filthy','subpar','ugh','bug','heat lamp'
+
+Service Quality
+Positive reviews - words of highest importance:'owner chef','staff amaze','family run'; Negative reviews - words of highest importance: 'service lack', service terrible','seem (to) care'
+
+Value Perceived by Customers
+Positive reviews - words of highest importance: 'ayce sushi'; Negative reviews - words of highest importance: 'waste money','save money','waste time money','pay extra'
+
+Time to Receive Food
+Positive reviews - words of highest importance: 'take first'; Negative reviews - words of highest importance: 'good minute','get bill','take forever get','bring check','waiter take'
+
 The themes around the experience-oriented phrases revolve around money spent or bad experiences from attending staff (e.g. speaking to managers, hospitality, sub-par service, saving money, taking forever, horrible service). It seems as if these issues, when apparent from the customer end, may even be reflected through the experience with the food. Inefficiencies with any restaurant or business are hard to ignore, and they translate down to the inevitable service a customer gets.
 
 For example, in the FX show The Bear, an accurate look into the life of restaurant workers, depicts a prime when communication, organization, and efficiency are not at the forefront of any operating business. In the scene depicted below, chaos in the kitchen soon ensues when tension between the cooks and chef starts to flare. The aftermath of this scene is not shown, but it is implied that several customers orders were left unfulfilled. Similar to the outputs of the model keywords, long wait times and terrible service are indicative of bad performance.
-
-
-https://www.youtube.com/watch?v=1K3z62yoiOA
-
 
 Money-oriented words/phrases were identified as well, implying perceived customer value of the food served also plays a big part in the overall satisfaction (e.g. "full price", "save money", "waste time money"). If a customer doesn't believe that the food they received was worth the money they paid they are less likely to support that restaurant in the future. 
 

@@ -108,10 +108,12 @@ The model is in an overall better state/performance level when compared to the o
 
 When considering a matter as sensitive as the restaurant industry, the distribution of words chosen across the breadth of different reviews have a large impact on how a restaurant is perceived and recognized by cultures and communities. The final model created, using a Multinomial Naive Bayes classifier with a TF-IDF vectorizer, was able to differentiate good/bad reviews with an accuracy of 83% for test data and 84% for training data.
 
-A classification report and confusion matrix of the final classifier model iteration can be seen below across the test/train datasets.
-
 The model performance is relatively strong, when considering the overall imbalance between good and bad reviews. This imbalance is to be expected, however, as seen through the previous plotted distributions, more people tend to leave relatively positive reviews for restaurants. In an ideal scenario, there would be an equal distrbution of good/bad restaurant reviews, but people may not want to leave bad reviews often, potentially out of fear of ruining someone's livelihood.
 From the above excerpts, the following aspects of improvement were identified, supported by example words/phrases for each aspect. The common thread amongst positive reviews revolves around food quality and overall experience. The common thread amongst negative reviews revolves around bad experiences and interactions with front-of-house staff, e.g. waiters. That being said, customers may be willing to overlook bad service in some instances if they receive great quality food.
+
+
+![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/8.png) 
+
 
 Food Quality
 Positive reviews - words of highest importance: 'best thai','omakase','ingredient fresh'; Negative reviews - words of highest importance: 'filthy','subpar','ugh','bug','heat lamp'
@@ -134,10 +136,6 @@ Positive reviews - words of highest importance: 'take first'; Negative reviews -
 Through the negative reviews, it is heavily noticable when restaurants drop the ball on timeliness and pacing of a meal. Diners who have to wait longer for service are inherently more hungry, impatient, and cranky, causing them to leave cautionary reviews.
 
 
-
-![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/8.png) 
-
-
 # Recommendation System
 
 To supplement the NLP analysis, a follow up component to the analysis is the creation of a recommendation system based on other users' reviews. While knowing key points of improvement proves to be a good solution for restaurants, a recommendation system is a client facing solution that also involves user input. These recommendations, supplemented by the tendencies found in the NLP analysis, provides a holistic, well-informed method of gauging restaurant value/worth.
@@ -146,20 +144,13 @@ The surprise package is imported above, and is used to read in the relevant fiel
 
 Below, it is seen that there are far more users than there are businesses. That being said, user-user comparison will likely be a more efficient/successful route for this recommender system, which compares similar users to similar users.
 
-
 Number of users:  20426 
 
 Number of businesses:  931
 
-
 Single Value Decomposition was used to generate a model that outputs user recommendations. Single Value Decomposition (SVD) is used to reduce a matrix into several component matrices, while revealing interesting tendencies about the original matrix. SVD involves the creation of an optimization problem; minimization of the prediction error margin is measured through the root mean squared error (RMSE). A lower RMSE is indicative of improved performance and vice versa.
 
-Grid search is used on the SVD model in order to view the lowest RMSE scores with the tested parameters. n_factors is one of the factors that refers to the number of factors that the matrix will be considered when making predictions. reg_all refers to the regularization term for all parameters.
-
-Below, the RMSE for the ideal model is only .208 for the relevant readers and prodictions. this is relatiely strong, because it measn our model is only off by a fraction of a star for its generated predictions. That being said, it is safe to assume that the system will be successfful in assigning predictions to the user
-
 While this method of assignment is invaluable at generating user predictions, it is highly advised for all users to take the next step of parsing through the business pages of the model outputs, in order to get more context before deciding to go to a given restaurant. As seen in the prior analysis the value of reading through review text gives the most informed decision for any restaurant goer.
-
 
 
 ![view](https://github.com/n0vah917/dsc-capstone/blob/main/images/6.png)

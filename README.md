@@ -212,7 +212,7 @@ For any additional questions, please contact Noah-John Hizon at noahiz917@gmail.
 
 ## Repository Structure
 
-
+```
 ...
 ├── README.md
 ├── repository.pdf                                                      #pdf of repository
@@ -220,3 +220,4 @@ For any additional questions, please contact Noah-John Hizon at noahiz917@gmail.
 ├── jupyter notebook.pdf                                                #pdf of jupyter notebook
 ├── yelpcomgen.csv                                                      #data file used for analysis
 └── Determining Attributes of Good Restaurants Using Review Text.ipynb  #jupyter notebook containing all relevant summaries/analyses
+```
